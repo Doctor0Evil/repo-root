@@ -1,0 +1,27 @@
+[workspace]
+members = [
+    "aln_syntax_evolver_v1",
+    "aln_cli_terminal_v1"
+]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+name = "aln_evolution_suite_v1_0_1_5"
+version = "1.0.1"
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.8", features = ["v4", "serde"] }
+thiserror = "1.0"
+tokio = { version = "1.40", features = ["macros", "rt-multi-thread"] }
+reqwest = { version = "0.12", features = ["json", "stream"] }
+rdkafka = { version = "0.36", features = ["tokio"] }
+redis = { version = "0.25", features = ["tokio-comp"] }
+deadpool-postgres = { version = "0.14", features = ["serde"] }
+tokio-postgres = { version = "0.7", features = ["with-uuid-1", "with-chrono-0_4"] }
+opentelemetry = "0.24"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter"] }
