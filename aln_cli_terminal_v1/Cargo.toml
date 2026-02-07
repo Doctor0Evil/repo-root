@@ -1,0 +1,11 @@
+[package]
+name = "aln_cli_terminal_v1"
+version = "1.0.1"
+edition = "2021"
+
+[dependencies]
+aln_syntax_evolver_v1 = { path = "../aln_syntax_evolver_v1" }
+serde = { workspace = true }
+chrono = { workspace = true }
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
